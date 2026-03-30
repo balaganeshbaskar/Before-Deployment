@@ -1,1 +1,52 @@
-dsdsd
+Use these prompts to make projects secure, safe and effiecient:
+
+
+  The Security Auditor:
+    
+    Security audit this code:
+    [Paste code that handles auth, user input, or sensitive data]
+    
+    Check for:
+    1. Injection: SQL, NoSQL, command, LDAP
+    2. Auth/AuthZ: Session handling, privilege escalation, token issues
+    3. Data exposure: Logging secrets, error messages, API responses
+    4. Input validation: Missing sanitization, type coercion, length limits
+    5. Cryptography: Weak algorithms, hardcoded secrets, improper key handling
+    
+    For each finding:
+    - Severity: Critical / High / Medium / Low
+    - Attack scenario: How would someone exploit this?
+    - Fix: Specific code change needed
+    - Reference: Relevant OWASP/CWE if applicable
+    
+    Assume an attacker with knowledge of our stack.
+
+
+
+
+  The Performance Profiler:
+  
+    Analyze this code for performance issues:
+    [Paste code]
+    
+    Context:
+    - This runs [how often: per request / batch job / etc.]
+    - Data size: [typical input size]
+    - Current pain point: [what feels slow]
+    
+    Find:
+    1. Time complexity issues (O(n²) operations, unnecessary loops)
+    2. Database problems (N+1 queries, missing indexes, over-fetching)
+    3. Memory issues (large allocations, leaks, caching opportunities)
+    4. I/O bottlenecks (blocking calls, sequential when could be parallel)
+    5. Quick wins (simple changes with big impact)
+    
+    For each issue:
+    - Impact: High / Medium / Low
+    - Current behavior
+    - Suggested fix with code
+    - Expected improvement
+    
+    Focus on the 20% of changes that give 80% of the gains.
+
+
